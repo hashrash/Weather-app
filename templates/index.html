@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Register System{% endblock %}
+
+{% block content %}
+
+{% if message  %}
+<!--This part also modified from Alert Box-->
+      <div class="alert alert-error">
+          <div class="alert-icon">
+              <span class="material-symbols-outlined">Oops!</span>
+          </div>
+          <div class="alert-text">
+              {{ message | safe }} {# Use the | safe filter to properly escape the message #}
+          </div>
+      </div>
+{% endif %}
+<!--Alert Box styles-->
+<link href="/static/css/alertboxstyle.css" rel="stylesheet">
+
+<!--sign page added-->
+<link href="/static/css/signin.css" rel="stylesheet">
+
+<div class="container">
+  <div class="title">Registration</div>
+  <div class="content">
+    <form action="" method="post">
+
+      <div class="user-details">
+        <div class="input-box">
+          <!--<label class="details">First Name</label>-->
+          <span class="details">Full Name</span>
+          <input name="fullname" id="inputFullName" placeholder="Enter full name" required>
+          <br><br>
+          <!--
+          <span class="details">Last Name</span>
+          <input type="text" placeholder="Enter your Last name" required>
+          <br><br>-->
+          <span class="details">Email</span>
+          <input name="email" id="InputEmail" placeholder="Enter email" required>
+          <br><br>
+          <span class="details">Password</span>
+          <input type="password" name="password1" id="InputPassword" placeholder="Password" required>
+          <br><br>
+          <span class="details">Confirm Password</span>
+          <input type="password" name="password2" id="InputPassword2" placeholder="Repeat Password" required>
+        </div>
+        <br>
+      </div>
+
+      <div class="button">
+        <button type="submit">Register Now</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!--sign page added-->
+
+<!--Alert Box JavaScript-->
+<script src="/static/js/alertbox.js"></script>
+
+{% endblock %}

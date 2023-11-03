@@ -1,0 +1,79 @@
+/*----- Toggle Button -----*/
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    opacity: 0.9;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+  }
+  .side-nav a {
+    padding: 10px 10px 10px 30px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #ccc;
+    display: block;
+    transition: 0.3s;
+  }
+  .side-nav a:hover { color: #008080; }
+  .side-nav .btn-close {
+    position: absolute;
+    top: 0;
+    right: 22px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  #main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+    overflow: hidden;
+    width: 100%;
+    
+  }
+  /*bullet list*/
+  .bullet-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .bullet-list li {
+    position: relative;
+    padding-left: 20px; /* Adjust the padding to control the space between the bullet and text */
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+  
+  .bullet-list li:before {
+    content: '\2022'; /* Unicode bullet character (•) */
+    position: absolute;
+    left: 20;
+    color: #fff; /* White color for the bullet */
+  }
+  .horizontal-line {
+  position: relative;
+  width: 80%;
+  height: 2px;
+  background-color: #000;
+  margin: 10px auto;
+}
+
+.horizontal-line::before,
+.horizontal-line::after {
+  content: "";
+  position: absolute;
+  width: 10px; /* Adjust the width as needed for the "cut" effect */
+  height: 2px;
+  background-color: #000;
+}
+
+.horizontal-line::before {
+  left: 0;
+}
+
+.horizontal-line::after {
+  right: 0;
+}

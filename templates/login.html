@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Login System{% endblock %}
+
+{% block content %}
+
+{% if message  %}
+<!--This part also modified from Alert Box-->
+      <div class="alert alert-error">
+          <div class="alert-icon">
+              <span class="material-symbols-outlined">Oops!</span>
+          </div>
+          <div class="alert-text">
+              {{ message | safe }} {# Use the | safe filter to properly escape the message #}
+          </div>
+      </div>
+{% endif %}
+<!--Alert Box styles-->
+<link href="/static/css/alertboxstyle.css" rel="stylesheet">
+
+<!--Added Login part-->
+
+<link href="/static/css/login.css" rel="stylesheet">
+
+<div class="wrapper">
+  <form action="" method="post">
+    <h2>Login</h2>
+      <div class="input-field">
+      <input type="text" input name="email" id="InputEmail" placeholder="Enter your email">
+      <label>Enter your email</label>
+    </div>
+    <div class="input-field">
+      <input type="password" name="password" id="InputPassword" placeholder="Enter your password">
+      <label>Enter your password</label>
+    </div>
+    <div class="forget">
+      <label for="remember">
+        <input type="checkbox" id="remember">
+        <p>Remember me</p>
+      </label>
+      <a href="#">Forgot password?</a>
+    </div>
+    <div class="button-container">
+      <button type="submit" class="rounded-button">Submit</button>
+        
+  
+    </div>
+
+    <!--<button type="submit">Log In</button>-->
+    <div class="register">
+      <p>Don't have an account? <a href="#">Register</a></p>
+    </div>
+  </form>
+</div>
+<!--Added Login part-->
+
+<!--Alert Box JavaScript-->
+<script src="/static/js/alertbox.js"></script>
+
+{% endblock %}
+

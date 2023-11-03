@@ -1,0 +1,46 @@
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48;
+}
+
+.alert {
+    --foreground-color: #222222;
+    --background-color: #eeeeee;
+
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+    background-color: var(--background-color);
+    /*position: absolute;  Position the alert absolutely within the container */
+    position: fixed; /* Position the alert fixed at the top of the page */
+    top: 0; /* Stick to the top */
+    z-index: 999; /* Set a high z-index value to make it appear on top */
+}
+
+.alert-icon {
+    display: flex;
+    align-items: center;
+}
+
+.alert-text {
+    margin-left: 1em;
+    font-size: 1.15em;
+    font-weight: 500;
+    font-family: 'Lexend', sans-serif;
+}
+
+.alert-icon .material-symbols-outlined,
+.alert-text {
+    color: var(--foreground-color);
+}
+
+.alert-error {
+    --foreground-color: #ffffff;
+    --background-color: #cb0000;
+}

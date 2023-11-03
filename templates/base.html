@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/togglebutton.css">
+    <title>Weather</title>
+
+	<script>
+        //toggle menu
+        function openSideMenu(){
+            document.getElementById('side-menu').style.width ='250px';
+            document.getElementById('main').style.marginLeft ='250px';
+        }
+        
+        function closeSideMenu(){
+            document.getElementById('side-menu').style.width ='0';
+            document.getElementById('main').style.marginLeft ='0';
+        }
+    </script>
+
+</head>
+<body>
+
+<!--toggle button start-->
+<nav class="navbar">
+    <span class="open-side">
+        <a href="#" onclick="openSideMenu()">
+          <svg width="30" height="700" style="transform: translateX(-410px);">
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+          </svg>
+        </a>
+      </span>
+      
+        </nav>
+      <div id="side-menu" class="side-nav" style="width: 0px;">
+        <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
+		
+		<!--
+        <a href="#"><b>Home</b></a>
+          <hr class="horizontal-line">-->
+
+          <a href="/">Register</a>
+          <hr class="horizontal-line">
+          <a href="/login">Login</a>
+          <hr class="horizontal-line">
+          <a href="/logout">Logout</a>
+		
+      </div>
+        <!--toggle button finish-->
+
+    {% block content %}
+		{# Template Inserted here #}
+    {% endblock %}
+
+
+
+</body>
+</html>
